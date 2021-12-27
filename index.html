@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Responsive Login And Register Form</title>
+   <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+</head>
+<body>
+   <div class="sign-in-wrapper">
+      <div class="sign-in">
+         <div class="head-container">
+         <div class="line">g</div>
+         <div class="header">SIGN IN</div>
+         </div>
+      <!--<form>-->
+      <input type="text" placeholder="Enter your username" class="input"><br />
+      <div class="pw-group">
+      <input type="password" placeholder="Enter your password" class="input password">
+      <img src="./imgs/able.png" class="able" onclick="display()"/>
+      <img src="./imgs/hide.png" class="hide" onclick="display()">
+      </div>
+      <input type="submit" value="GO" class="btn"/>
+      <!--</form>-->
+      <hr />
+      <p class="or">OR CONTINUE WITH</p>
+      <div class="login-with">
+      <button class="or-btn first-btn">
+         <img src="./imgs/google.png" alt="google" /><span>GOOGLE</span></button><br />
+      <button class="or-btn second-btn"><img src="./imgs/fb.png" alt="Facebook" /><span>FACEBOOK</span></button>
+      </div>
+      <div class="no-acc">
+         <p>Don't have an account?
+         <span onclick="">Register</span>
+         </p>
+      </div>
+      </div>
+   </div>
+   
+   
+
+   
+<script>
+   function display(){
+      const input = document.querySelector(".password");
+      const hide = document.querySelector(".hide");
+      const able = document.querySelector(".able");
+if (input.getAttribute("type") === "password") {
+  input.setAttribute("type", "text");
+  hide.style.display = "none";
+  able.style.display = "block";
+} else {
+  input.setAttribute("type", "password");
+  hide.style.display = "block";
+  able.style.display = "none";
+}
+   }
+   
+   function register(){
+      const signin = document.querySelector('.sign-in-wrapper');
+      const signup = document.querySelector('.sign-up-wrapper');
+      signin.style.display = "none";
+      signin.style.height ="2px";
+   }
+</script>
+</body>
+</html>
